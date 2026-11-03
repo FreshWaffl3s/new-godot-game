@@ -1,8 +1,0 @@
-[gd_scene format=3 uid="uid://dg0wper056ye3"]
-
-[ext_resource type="Script" uid="uid://c5sxgpuofdgca" path="res://Player/player.gd" id="1_4ntmi"]
-[ext_resource type="PackedScene" uid="uid://cxec8u88vmlrf" path="res://placeholder.tscn" id="2_btcbx"]
-
-[node name="Node2D" type="Node2D" unique_id=1122059380]
-script = ExtResource("1_4ntmi")
-idk = ExtResource("2_btcbx")

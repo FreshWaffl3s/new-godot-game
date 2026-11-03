@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ccej0rmhc6ybv"]
+
+[ext_resource type="Script" uid="uid://ytl4ghoioeha" path="res://Player/Mouse/mouse.gd" id="1_sgu3e"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hcs41"]
+radius = 1.0
+
+[node name="mouse" type="Node2D" unique_id=1467588240]
+script = ExtResource("1_sgu3e")
+
+[node name="HoverDetection" type="Area2D" parent="." unique_id=1431673987]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HoverDetection" unique_id=1906460356]
+shape = SubResource("CircleShape2D_hcs41")

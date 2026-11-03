@@ -3,5 +3,5 @@
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_tchlg"]
 
 [node name="placeholder" type="Sprite2D" unique_id=2111799960]
-scale = Vector2(0.6, 0.3)
+scale = Vector2(0.2, 0.08)
 texture = SubResource("NoiseTexture2D_tchlg")
