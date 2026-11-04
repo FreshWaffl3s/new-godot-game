@@ -10,18 +10,19 @@ size = Vector2(64, 20)
 size = Vector2(72, 29)
 
 [node name="wall_preview" type="Node2D" unique_id=990120736]
-position = Vector2(37, 18)
 script = ExtResource("1_28fjv")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2035900881]
 texture = ExtResource("1_lkumv")
 
 [node name="overlap_detection" type="Area2D" parent="." unique_id=1214691770]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="overlap_detection" unique_id=1844107864]
 shape = SubResource("RectangleShape2D_hcs41")
 
 [node name="snapping_detection" type="Area2D" parent="." unique_id=902749947]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="snapping_detection" unique_id=1800801998]
 position = Vector2(0, -0.5)

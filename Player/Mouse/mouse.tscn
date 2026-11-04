@@ -9,6 +9,11 @@ radius = 1.0
 script = ExtResource("1_sgu3e")
 
 [node name="HoverDetection" type="Area2D" parent="." unique_id=1431673987]
+collision_layer = 4
+collision_mask = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HoverDetection" unique_id=1906460356]
 shape = SubResource("CircleShape2D_hcs41")
+
+[connection signal="area_entered" from="HoverDetection" to="." method="_on_hover_detection_area_entered"]
+[connection signal="area_exited" from="HoverDetection" to="." method="_on_hover_detection_area_exited"]

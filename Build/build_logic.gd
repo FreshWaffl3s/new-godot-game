@@ -4,8 +4,8 @@ var wall_preview : PackedScene = preload ("res://Build/Buildables/Wall/preview/w
 
 var preview_toggle : bool = false
 
-func _physics_process(delta: float) -> void:
-	if Input.is_action_just_pressed("PREVIEW"):
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("PREVIEW"):
 		preview_toggle = !preview_toggle
 		if preview_toggle == true:
 			var wall_preview_instance : Node = wall_preview.instantiate()

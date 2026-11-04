@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b8ytq4au6lddm" path="res://Player/Camera/camera_2d.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dg0wper056ye3" path="res://Build/builds.tscn" id="2_0xm2m"]
+[ext_resource type="PackedScene" uid="uid://ccej0rmhc6ybv" path="res://Player/Mouse/mouse.tscn" id="3_h2yge"]
 
 [node name="main" type="Node2D" unique_id=1644939314]
 
@@ -9,3 +10,6 @@
 position = Vector2(960, 540)
 
 [node name="builds" parent="." unique_id=1122059380 instance=ExtResource("2_0xm2m")]
+
+[node name="mouse" parent="." unique_id=1467588240 instance=ExtResource("3_h2yge")]
+position = Vector2(949, 540)
