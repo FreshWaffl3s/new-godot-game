@@ -16,16 +16,17 @@ func _process(delta: float) -> void:
 	if parent.preview_toggle == false:
 		queue_free()
 		return
-	if Input.is_action_pressed("ROTATE") and snapping_toggle == false:
-		rotation_degrees += rotation_speed * delta
+	if (Input.is_action_pressed("ROTATE-RIGHT") or Input.is_action_pressed("ROTATE-LEFT")) and snapping_toggle == false:
+		rotation_degrees += rotation_speed * delta * Input.get_axis("ROTATE-LEFT", "ROTATE-RIGHT")
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("BUILD") and can_build == true:
 		var wall_instance = wall.instantiate()
 		wall_instance.position = position
 		wall_instance.rotation = rotation
-		add_child(wall_instance)
+		add_sibling(wall_instance)
 	elif event.is_action_pressed("SNAPPING"):
 		snapping_toggle = !snapping_toggle
-	elif event.is_action_pressed("ROTATE") and snapping_toggle:
-		rotation_degrees += rotation_increments
+		rotation_degrees = snappedf(rotation_degrees, rotation_increments)
+	elif (Input.is_action_pressed("ROTATE-RIGHT") or Input.is_action_pressed("ROTATE-LEFT")) and snapping_toggle:
+		rotation_degrees += rotation_increments * Input.get_axis("ROTATE-LEFT", "ROTATE-RIGHT")
