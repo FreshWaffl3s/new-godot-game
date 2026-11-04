@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://qq5lse6iiw51"]
+
+[ext_resource type="Script" uid="uid://bwm50y3ddavv2" path="res://Build/Buildables/Wall/preview/wall_preview.gd" id="1_28fjv"]
+[ext_resource type="Texture2D" uid="uid://bh8jg0eerl4xe" path="res://Build/Buildables/Wall/wall.png" id="1_lkumv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hcs41"]
+size = Vector2(63, 20)
+
+[node name="wall_preview" type="Node2D" unique_id=990120736]
+script = ExtResource("1_28fjv")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1214691770]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1844107864]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_hcs41")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2035900881]
+texture = ExtResource("1_lkumv")

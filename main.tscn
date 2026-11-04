@@ -3,19 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://b8ytq4au6lddm" path="res://Player/Camera/camera_2d.tscn" id="1_ig7tw"]
 [ext_resource type="PackedScene" uid="uid://dg0wper056ye3" path="res://Build/builds.tscn" id="2_0xm2m"]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ws5x2"]
-
 [node name="main" type="Node2D" unique_id=1644939314]
 
 [node name="Camera2D2" parent="." unique_id=517240496 instance=ExtResource("1_ig7tw")]
 position = Vector2(960, 540)
 
-[node name="level" type="Node2D" parent="." unique_id=1041934835]
-
-[node name="Sprite2D3" type="Sprite2D" parent="level" unique_id=101338157]
-position = Vector2(305, 310)
-rotation = 0.7853982
-scale = Vector2(1.0445065, 0.41783172)
-texture = SubResource("NoiseTexture2D_ws5x2")
-
-[node name="Node2D2" parent="level" unique_id=1122059380 instance=ExtResource("2_0xm2m")]
+[node name="builds" parent="." unique_id=1122059380 instance=ExtResource("2_0xm2m")]

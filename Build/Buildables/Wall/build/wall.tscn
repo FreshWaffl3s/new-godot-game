@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://f7juv6po4wqh"]
+
+[ext_resource type="Script" uid="uid://dyaomxabeasku" path="res://Build/Buildables/Wall/build/wall.gd" id="1_imduy"]
+[ext_resource type="SpriteFrames" uid="uid://dfjkyro2ca50o" path="res://Build/Buildables/Wall/wall_anim.tres" id="2_upa0f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hcs41"]
+size = Vector2(64, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sdreb"]
+size = Vector2(64, 20)
+
+[node name="wall" type="StaticBody2D" unique_id=1167260029]
+script = ExtResource("1_imduy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1079693126]
+sprite_frames = ExtResource("2_upa0f")
+animation = &"new"
+autoplay = "new"
+
+[node name="Collider" type="CollisionShape2D" parent="." unique_id=75924738]
+shape = SubResource("RectangleShape2D_hcs41")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1159669683]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1668808549]
+shape = SubResource("RectangleShape2D_sdreb")

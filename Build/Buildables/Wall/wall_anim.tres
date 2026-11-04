@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dfjkyro2ca50o"]
+
+[ext_resource type="Texture2D" uid="uid://bh8jg0eerl4xe" path="res://Build/Buildables/Wall/wall.png" id="1_wdawi"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wdawi")
+}],
+"loop": 1,
+"name": &"new",
+"speed": 5.0
+}]
